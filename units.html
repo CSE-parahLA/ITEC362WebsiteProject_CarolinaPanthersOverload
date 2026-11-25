@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carolina Panthers Overload | Units</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+        <a href="index.html">
+            <img
+                src="images/cpoverload-logo.jpg"
+                alt="Carolina Panthers Overload home"
+                width="80"
+            >
+        </a>
+
+       <p style="font-size: 24px;">Carolina Panthers Overload</p>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="players.html">Players</a>
+        <a href="coaches.html">Coaches</a>
+        <a href="units.html">Units</a>
+    </nav>
+</header>
+
+<main id="main-content">
+    <h3>Carolina Panthers</h3>
+    <h1>Positional Units</h1>
+    <p>This page organizes Panthers players by position group across Offense, Defense, and Special Teams. The lists are a fan-reference breakdown, not an official projected starter or backup order; players are presented by position without ranking, and names within each group are not necessarily depth-chart positions.</p>
+
+
+    <section class="controls" aria-labelledby="unit-tools-heading">
+        <h2 id="unit-tools-heading">Unit Finder</h2>
+        <form id="unit-controls" novalidate>
+            <fieldset class="side-buttons">
+                <legend>Show unit</legend>
+                <button type="button" data-side="all" aria-pressed="true">All</button>
+                <button type="button" data-side="offense" aria-pressed="false">Offense</button>
+                <button type="button" data-side="defense" aria-pressed="false">Defense</button>
+                <button type="button" data-side="special-teams" aria-pressed="false">Special Teams</button>
+            </fieldset>
+            <div class="field">
+                <label for="unit-search">Find a player</label>
+                <input type="search" id="unit-search" placeholder="Name, #number or position (e.g. CB)" autocomplete="off">
+            </div>
+            <button type="button" id="unit-collapse" class="secondary">Collapse all groups</button>
+            <button type="button" id="unit-expand" class="secondary">Expand all groups</button>
+        </form>
+        <p id="unit-status" class="status" aria-live="polite"></p>
+    </section>
+    <p id="unit-empty" role="status" hidden>No players match your search. Try a name, a jersey number or a position such as QB or CB.</p>
+
+    <section id="offense">
+        <h2>Offensive Units</h2>
+        <p>The offensive unit focuses on executing tactical plays to control possession and score touchdowns.</p>
+        <p>Players are grouped by position; this is not an official starting lineup or depth chart ranking.</p>
+
+        <h3>Quarterbacks (QB)</h3>
+        <ul>
+            <li>#9 Bryce Young</li>
+            <li>#12 Kenny Pickett</li>
+            <li>#16 Haynes King</li>
+        </ul>
+
+        <h3>Running Backs (RB)</h3>
+        <ul>
+            <li>#23 Trevor Etienne</li>
+            <li>#25 Jonathon Brooks</li>
+            <li>#28 AJ Dillon</li>
+            <li>#30 Chuba Hubbard</li>
+            <li>#34 Anthony Tyus III</li>
+        </ul>
+
+        <h3>Wide Receivers (WR)</h3>
+        <ul>
+            <li>#4 Tetairoa McMillan</li>
+            <li>#13 John Metchie III</li>
+            <li>#17 Xavier Legette</li>
+            <li>#18 Jalen Coker</li>
+            <li>#19 Chris Brazzell II</li>
+            <li>#83 David Moore</li>
+            <li>#87 Brycen Tremayne</li>
+        </ul>
+
+        <h3>Tight Ends (TE)</h3>
+        <ul>
+            <li>#0 Ja'Tavion Sanders</li>
+            <li>#81 Feleipe Franks</li>
+            <li>#82 Tommy Tremble</li>
+            <li>#84 Mitchell Evans</li>
+            <li>#88 Darren Waller</li>
+        </ul>
+
+        <h3>Offensive Line (OL / T / G / C)</h3>
+        <ul>
+            <li>#50 Robert Hunt (G)</li>
+            <li>#57 Monroe Freeling (T)</li>
+            <li>#63 Rasheed Walker (T)</li>
+            <li>#65 Torricelli Simpkins III (G)</li>
+            <li>#67 Corey Bullock (OT)</li>
+            <li>#68 Damien Lewis (G)</li>
+            <li>#70 Brady Christensen (OL)</li>
+            <li>#72 Taylor Moton (T)</li>
+            <li>#73 Stone Forsythe (T)</li>
+            <li>#75 Sam Hecht (C)</li>
+            <li>#77 Luke Fortner (C)</li>
+            <li>#79 Ikem Ekwonu (T)</li>
+        </ul>
+    </section>
+
+    <section id="defense">
+        <h2>Defensive Units</h2>
+        <p>The defensive unit aims to disrupt opponent drives, stop the run, and force turnovers.</p>
+        <p>Players are grouped by position; this is not an official starting lineup or depth chart ranking.</p>
+
+        <h3>Defensive Line & Defensive Tackles (DT)</h3>
+        <ul>
+            <li>#92 Lee Hunter</li>
+            <li>#93 TeRah Edwards</li>
+            <li>#94 Aaron Hall</li>
+            <li>#95 Derrick Brown</li>
+            <li>#97 Bobby Brown III</li>
+            <li>#98 Tershawn Wharton</li>
+            <li>#99 Cam Jackson</li>
+        </ul>
+
+        <h3>Outside Linebackers / Edge Rushers (OLB)</h3>
+        <ul>
+            <li>#3 Princely Umanmielen</li>
+            <li>#5 Jaelan Phillips</li>
+            <li>#11 Nic Scourton</li>
+            <li>#39 Nick Hampton</li>
+            <li>#48 Thomas Incoom</li>
+            <li>#52 Trevis Gipson</li>
+            <li>#91 Patrick Jones II</li>
+        </ul>
+
+        <h3>Inside Linebackers (LB)</h3>
+        <ul>
+            <li>#33 Tyrel Dodson</li>
+            <li>#46 Jackson Kuwatch</li>
+            <li>#54 Bam Martin-Scott</li>
+            <li>#55 Devin Lloyd</li>
+            <li>#58 Bobby Okereke</li>
+        </ul>
+
+        <h3>Cornerbacks (CB)</h3>
+        <ul>
+            <li>#2 Mike Jackson</li>
+            <li>#8 Jaycee Horn</li>
+            <li>#24 Will Lee III</li>
+            <li>#26 Chau Smith-Wade</li>
+            <li>#29 Akayleb Evans</li>
+            <li>#36 Malcolm DeWalt IV</li>
+        </ul>
+
+        <h3>Safeties (S)</h3>
+        <ul>
+            <li>#7 Tre'von Moehrig</li>
+            <li>#20 Zakee Wheatley</li>
+            <li>#21 Nick Scott</li>
+            <li>#22 Lathan Ransom</li>
+            <li>#27 Isaiah Simmons</li>
+        </ul>
+    </section>
+
+    <section id="special-teams">
+        <h2>Special Teams</h2>
+        <p>Responsible for kickoffs, punts, field goals, and extra point operations.</p>
+        <p>These entries identify role assignments for fan reference and do not indicate an official starter or backup order.</p>
+        <ul>
+            <li><strong>Kicker (K):</strong> #10 Ryan Fitzgerald</li>
+            <li><strong>Punter (P):</strong> #6 Sam Martin</li>
+            <li><strong>Long Snapper (LS):</strong> #44 JJ Jansen</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Carolina Panthers Overload. Unofficial fan site.</p>
+</footer>
+    <script src="js/main.js" defer></script>
+    <script src="js/units.js" defer></script>
+</body>
+</html>

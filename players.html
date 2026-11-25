@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carolina Panthers Overload | Players</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+        <a href="index.html">
+            <img
+                src="images/cpoverload-logo.jpg"
+                alt="Carolina Panthers Overload home"
+                width="80"
+            >
+        </a>
+
+        <p style="font-size: 24px;">Carolina Panthers Overload</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="players.html">Players</a>
+            <a href="coaches.html">Coaches</a>
+            <a href="units.html">Units</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h3>CAROLINA PANTHERS</h3>
+        <h1>2026-2027 ROSTER</h1>
+        <p>This page presents an expanded player roster for fan reference; it includes the full player list shown here and is not intended to represent only the NFL's 53-man active roster limit.</p>
+
+
+        <section class="controls" aria-labelledby="roster-tools-heading">
+            <h2 id="roster-tools-heading">Roster Tools</h2>
+            <form id="roster-controls" novalidate>
+                <div class="field">
+                    <label for="player-search">Search players</label>
+                    <input type="search" id="player-search" placeholder="Name, college or #number" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="position-filter">Position group</label>
+                    <select id="position-filter"></select>
+                </div>
+                <div class="field">
+                    <label for="min-age">Min age</label>
+                    <input type="number" id="min-age" inputmode="numeric" placeholder="e.g. 22">
+                </div>
+                <div class="field">
+                    <label for="max-age">Max age</label>
+                    <input type="number" id="max-age" inputmode="numeric" placeholder="e.g. 30">
+                </div>
+                <div class="field">
+                    <label for="sort-key">Sort by</label>
+                    <select id="sort-key"></select>
+                </div>
+                <div class="field">
+                    <label for="sort-dir">Order</label>
+                    <select id="sort-dir">
+                        <option value="asc">Ascending</option>
+                        <option value="desc">Descending</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label><input type="checkbox" id="favorites-only"> Favorites only</label>
+                    <button type="button" id="clear-favorites" class="secondary">Clear favorites</button>
+                </div>
+                <button type="button" id="reset-filters" class="secondary">Reset all</button>
+            </form>
+            <p id="form-error" class="error" role="alert"></p>
+            <p id="results-count" class="status" aria-live="polite"></p>
+            <div id="roster-stats" class="stats" aria-label="Statistics for the players shown"></div>
+        </section>
+
+        <p id="no-results" role="status" hidden>No players match your filters. Try clearing the search or widening the age range.</p>
+
+        <div class="roster-table-wrap">
+        <table id="roster-table">
+            <caption>Carolina Panthers Roster</caption>
+
+            <thead>
+                <tr>
+                    <th>Photo</th>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Position</th>
+                    <th>Height</th>
+                    <th>Weight</th>
+                    <th>Age</th>
+                    <th>Exp</th>
+                    <th>College</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><img src="images/jtsanders.jpg" alt="Ja'Tavion Sanders" width="100"></td>
+                    <td>Ja'Tavion Sanders</td>
+                    <td>0</td><td>TE</td><td>6-4</td><td>243</td>
+                    <td>23</td><td>3</td><td>Texas</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/princely.jpg" alt="Princely Umanmielen" width="100"></td>
+                    <td>Princely Umanmielen</td>
+                    <td>3</td><td>OLB</td><td>6-4</td><td>255</td>
+                    <td>24</td><td>2</td><td>Mississippi</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/tetmcmill.jpg" alt="Tetairoa McMillan" width="100"></td>
+                    <td>Tetairoa McMillan</td>
+                    <td>4</td><td>WR</td><td>6-4</td><td>220</td>
+                    <td>23</td><td>2</td><td>Arizona</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/jphillips.jpg" alt="Jaelan Phillips" width="100"></td>
+                    <td>Jaelan Phillips</td>
+                    <td>5</td><td>OLB</td><td>6-5</td><td>265</td>
+                    <td>27</td><td>6</td><td>Miami</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/sam_martin.jpg" alt="Sam Martin" width="100"></td>
+                    <td>Sam Martin</td>
+                    <td>6</td><td>P</td><td>6-1</td><td>207</td>
+                    <td>36</td><td>14</td><td>Appalachian State</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/trevon7.jpg" alt="Tre'von Moehrig" width="100"></td>
+                    <td>Tre'von Moehrig</td>
+                    <td>7</td><td>S</td><td>6-2</td><td>215</td>
+                    <td>27</td><td>6</td><td>TCU</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/by9.jpg" alt="Bryce Young" width="100"></td>
+                    <td>Bryce Young</td>
+                    <td>9</td><td>QB</td><td>5-10</td><td>204</td>
+                    <td>25</td><td>4</td><td>Alabama</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/ryanfitz.jpg" alt="Ryan Fitzgerald" width="100"></td>
+                    <td>Ryan Fitzgerald</td>
+                    <td>10</td><td>K</td><td>5-11</td><td>201</td>
+                    <td>26</td><td>2</td><td>Florida State</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/kennypickett.jpg" alt="Kenny Pickett" width="100"></td>
+                    <td>Kenny Pickett</td>
+                    <td>12</td><td>QB</td><td>6-3</td><td>218</td>
+                    <td>28</td><td>5</td><td>Pittsburgh</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/john_metchie.jpg" alt="John Metchie III" width="100"></td>
+                    <td>John Metchie III</td>
+                    <td>13</td><td>WR</td><td>6-0</td><td>204</td>
+                    <td>26</td><td>4</td><td>Alabama</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/haynes_king.jpg" alt="Haynes King" width="100"></td>
+                    <td>Haynes King</td>
+                    <td>16</td><td>QB</td><td>6-3</td><td>215</td>
+                    <td>25</td><td>R</td><td>Georgia Tech</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/jalencoker.jpg" alt="Jalen Coker" width="100"></td>
+                    <td>Jalen Coker</td>
+                    <td>18</td><td>WR</td><td>6-3</td><td>215</td>
+                    <td>25</td><td>3</td><td>Holy Cross</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/zakeewheatley.jpg" alt="Zakee Wheatley" width="100"></td>
+                    <td>Zakee Wheatley</td>
+                    <td>20</td><td>S</td><td>6-2</td><td>204</td>
+                    <td>24</td><td>R</td><td>Penn State</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/nickscott.jpg" alt="Nick Scott" width="100"></td>
+                    <td>Nick Scott</td>
+                    <td>21</td><td>S</td><td>5-11</td><td>200</td>
+                    <td>31</td><td>8</td><td>Penn State</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/lathan_ransom.jpg" alt="Lathan Ransom" width="100"></td>
+                    <td>Lathan Ransom</td>
+                    <td>22</td><td>S</td><td>6-0</td><td>202</td>
+                    <td>24</td><td>2</td><td>Ohio State</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/trevor_etienne.jpg" alt="Trevor Etienne" width="100"></td>
+                    <td>Trevor Etienne</td>
+                    <td>23</td><td>RB</td><td>5-9</td><td>204</td>
+                    <td>22</td><td>2</td><td>Georgia</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/willlee.jpg" alt="Will Lee III" width="100"></td>
+                    <td>Will Lee III</td>
+                    <td>24</td><td>CB</td><td>6-1</td><td>195</td>
+                    <td>23</td><td>R</td><td>Texas A&amp;M</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/chausmithwade.jpg" alt="Chau Smith-Wade" width="100"></td>
+                    <td>Chau Smith-Wade</td>
+                    <td>26</td><td>CB</td><td>5-11</td><td>192</td>
+                    <td>24</td><td>3</td><td>Washington State</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/isaiahsimmons.jpg" alt="Isaiah Simmons" width="100"></td>
+                    <td>Isaiah Simmons</td>
+                    <td>27</td><td>S</td><td>6-4</td><td>232</td>
+                    <td>28</td><td>6</td><td>Clemson</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/ajdillion.jpg" alt="AJ Dillon" width="100"></td>
+                    <td>AJ Dillon</td>
+                    <td>28</td><td>RB</td><td>6-0</td><td>248</td>
+                    <td>28</td><td>7</td><td>Boston College</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/chubbahubbad.jpg" alt="Chuba Hubbard" width="100"></td>
+                    <td>Chuba Hubbard</td>
+                    <td>30</td><td>RB</td><td>6-1</td><td>216</td>
+                    <td>27</td><td>6</td><td>Oklahoma State</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/tyrelldodson.png" alt="Tyrel Dodson" width="100"></td>
+                    <td>Tyrel Dodson</td>
+                    <td>33</td><td>LB</td><td>6-0</td><td>242</td>
+                    <td>28</td><td>7</td><td>Texas A&amp;M</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/anthony-tyusiii.jpg" alt="Anthony Tyus III" width="100"></td>
+                    <td>Anthony Tyus III</td>
+                    <td>34</td><td>RB</td><td>6-1</td><td>222</td>
+                    <td>23</td><td>1</td><td>Ohio</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/malcolmdeWalt IV.png" alt="Malcolm DeWalt IV" width="100"></td>
+                    <td>Malcolm DeWalt IV</td>
+                    <td>36</td><td>CB</td><td>6-2</td><td>190</td>
+                    <td>24</td><td>R</td><td>Akron</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/nick-hampton.jpg" alt="Nick Hampton" width="100"></td>
+                    <td>Nick Hampton</td>
+                    <td>39</td><td>OLB</td><td>6-3</td><td>235</td>
+                    <td>26</td><td>4</td><td>Appalachian State</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/jj_jansen.jpg" alt="JJ Jansen" width="100"></td>
+                    <td>JJ Jansen</td>
+                    <td>44</td><td>LS</td><td>6-2</td><td>245</td>
+                    <td>40</td><td>19</td><td>Notre Dame</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/jackson_kuwatch.jpg" alt="Jackson Kuwatch" width="100"></td>
+                    <td>Jackson Kuwatch</td>
+                    <td>46</td><td>LB</td><td>6-4</td><td>234</td>
+                    <td>23</td><td>R</td><td>Miami (Ohio)</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/robert_hunt.jpg" alt="Robert Hunt" width="100"></td>
+                    <td>Robert Hunt</td>
+                    <td>50</td><td>G</td><td>6-6</td><td>335</td>
+                    <td>30</td><td>7</td><td>Louisiana-Lafayette</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/trevor_gipson.jpg" alt="Trevis Gipson" width="100"></td>
+                    <td>Trevis Gipson</td>
+                    <td>52</td><td>OLB</td><td>6-4</td><td>264</td>
+                    <td>29</td><td>7</td><td>Tulsa</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/bam_martin-scott.jpg" alt="Bam Martin-Scott" width="100"></td>
+                    <td>Bam Martin-Scott</td>
+                    <td>54</td><td>LB</td><td>6-2</td><td>235</td>
+                    <td>26</td><td>2</td><td>South Carolina</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/devin_lloyd.jpg" alt="Devin Lloyd" width="100"></td>
+                    <td>Devin Lloyd</td>
+                    <td>55</td><td>LB</td><td>6-3</td><td>243</td>
+                    <td>28</td><td>5</td><td>Utah</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/monroe freeling.jpg" alt="Monroe Freeling" width="100"></td>
+                    <td>Monroe Freeling</td>
+                    <td>57</td><td>T</td><td>6-7</td><td>323</td>
+                    <td>22</td><td>R</td><td>Georgia</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/bobby-okereke.png" alt="Bobby Okereke" width="100"></td>
+                    <td>Bobby Okereke</td>
+                    <td>58</td><td>LB</td><td>6-2</td><td>235</td>
+                    <td>30</td><td>8</td><td>Stanford</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/rw63.jpg" alt="Rasheed Walker" width="100"></td>
+                    <td>Rasheed Walker</td>
+                    <td>63</td><td>T</td><td>6-6</td><td>328</td>
+                    <td>26</td><td>5</td><td>Penn State</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/ts3_65.png" alt="Torricelli Simpkins III" width="100"></td>
+                    <td>Torricelli Simpkins III</td>
+                    <td>65</td><td>G</td><td>6-5</td><td>312</td>
+                    <td>24</td><td>2</td><td>South Carolina</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/cb67.jpg" alt="Corey Bullock" width="100"></td>
+                    <td>Corey Bullock</td>
+                    <td>67</td><td>OT</td><td>6-3</td><td>325</td>
+                    <td>24</td><td>2</td><td>Maryland</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/dl68.jpg" alt="Damien Lewis" width="100"></td>
+                    <td>Damien Lewis</td>
+                    <td>68</td><td>G</td><td>6-2</td><td>335</td>
+                    <td>29</td><td>7</td><td>LSU</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/sf73.jpg" alt="Stone Forsythe" width="100"></td>
+                    <td>Stone Forsythe</td>
+                    <td>73</td><td>T</td><td>6-8</td><td>315</td>
+                    <td>28</td><td>6</td><td>Florida</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/sh75.jpg" alt="Sam Hecht" width="100"></td>
+                    <td>Sam Hecht</td>
+                    <td>75</td><td>C</td><td>6-4</td><td>305</td>
+                    <td>23</td><td>R</td><td>Kansas State</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/lf77.jpg" alt="Luke Fortner" width="100"></td>
+                    <td>Luke Fortner</td>
+                    <td>77</td><td>C</td><td>6-4</td><td>305</td>
+                    <td>28</td><td>5</td><td>Kentucky</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/ff81.jpg" alt="Feleipe Franks" width="100"></td>
+                    <td>Feleipe Franks</td>
+                    <td>81</td><td>TE</td><td>6-6</td><td>252</td>
+                    <td>28</td><td>4</td><td>Arkansas</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/tt82.jpg" alt="Tommy Tremble" width="100"></td>
+                    <td>Tommy Tremble</td>
+                    <td>82</td><td>TE</td><td>6-4</td><td>247</td>
+                    <td>26</td><td>6</td><td>Notre Dame</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/dm83.jpg" alt="David Moore" width="100"></td>
+                    <td>David Moore</td>
+                    <td>83</td><td>WR</td><td>6-0</td><td>219</td>
+                    <td>31</td><td>8</td><td>East Central</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/me84.jpg" alt="Mitchell Evans" width="100"></td>
+                    <td>Mitchell Evans</td>
+                    <td>84</td><td>TE</td><td>6-5</td><td>265</td>
+                    <td>23</td><td>2</td><td>Notre Dame</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/bt87.jpg" alt="Brycen Tremayne" width="100"></td>
+                    <td>Brycen Tremayne</td>
+                    <td>87</td><td>WR</td><td>6-4</td><td>212</td>
+                    <td>26</td><td>2</td><td>Stanford</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/dw88.jpg" alt="Darren Waller" width="100"></td>
+                    <td>Darren Waller</td>
+                    <td>88</td><td>TE</td><td>6-6</td><td>238</td>
+                    <td>34</td><td>9</td><td>Georgia Tech</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/pj2_91.jpg" alt="Patrick Jones II" width="100"></td>
+                    <td>Patrick Jones II</td>
+                    <td>91</td><td>OLB</td><td>6-4</td><td>260</td>
+                    <td>28</td><td>6</td><td>Pittsburgh</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/lh_92.jpg" alt="Lee Hunter" width="100"></td>
+                    <td>Lee Hunter</td>
+                    <td>92</td><td>DT</td><td>6-4</td><td>315</td>
+                    <td>24</td><td>R</td><td>Texas Tech</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/te_93.png" alt="TeRah Edwards" width="100"></td>
+                    <td>TeRah Edwards</td>
+                    <td>93</td><td>DT</td><td>6-2</td><td>305</td>
+                    <td>25</td><td>1</td><td>Illinois</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/ah_94.jpg" alt="Aaron Hall" width="100"></td>
+                    <td>Aaron Hall</td>
+                    <td>94</td><td>DT</td><td>6-4</td><td>300</td>
+                    <td>23</td><td>R</td><td>Duke</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/db_95.jpg" alt="Derrick Brown" width="100"></td>
+                    <td>Derrick Brown</td>
+                    <td>95</td><td>DT</td><td>6-5</td><td>330</td>
+                    <td>28</td><td>7</td><td>Auburn</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/bb3_97.jpg" alt="Bobby Brown III" width="100"></td>
+                    <td>Bobby Brown III</td>
+                    <td>97</td><td>DT</td><td>6-4</td><td>330</td>
+                    <td>26</td><td>6</td><td>Texas A&amp;M</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/tw98.jpg" alt="Tershawn Wharton" width="100"></td>
+                    <td>Tershawn Wharton</td>
+                    <td>98</td><td>DT</td><td>6-1</td><td>295</td>
+                    <td>28</td><td>7</td><td>Missouri-Rolla</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/cb2_19.jpg" alt="Chris Brazzell II" width="100"></td>
+                    <td>Chris Brazzell II</td>
+                    <td>19</td><td>WR</td><td>6-5</td><td>197</td>
+                    <td>23</td><td>R</td><td>Tennessee</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/jb25.jpg" alt="Jonathon Brooks" width="100"></td>
+                    <td>Jonathon Brooks</td>
+                    <td>25</td><td>RB</td><td>6-0</td><td>216</td>
+                    <td>23</td><td>3</td><td>Texas</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/bc70.jpg" alt="Brady Christensen" width="100"></td>
+                    <td>Brady Christensen</td>
+                    <td>70</td><td>OL</td><td>6-6</td><td>300</td>
+                    <td>30</td><td>6</td><td>BYU</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/ae29.jpg" alt="Akayleb Evans" width="100"></td>
+                    <td>Akayleb Evans</td>
+                    <td>29</td><td>CB</td><td>6-2</td><td>205</td>
+                    <td>27</td><td>5</td><td>Missouri</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/jh8.jpg" alt="Jaycee Horn" width="100"></td>
+                    <td>Jaycee Horn</td>
+                    <td>8</td><td>CB</td><td>6-1</td><td>212</td>
+                    <td>26</td><td>6</td><td>South Carolina</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/ti48.jpg" alt="Thomas Incoom" width="100"></td>
+                    <td>Thomas Incoom</td>
+                    <td>48</td><td>OLB</td><td>6-4</td><td>248</td>
+                    <td>27</td><td>4</td><td>Central Michigan</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/cj99.jpg" alt="Cam Jackson" width="100"></td>
+                    <td>Cam Jackson</td>
+                    <td>99</td><td>DT</td><td>6-6</td><td>340</td>
+                    <td>24</td><td>2</td><td>Florida</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/mj2.jpg" alt="Mike Jackson" width="100"></td>
+                    <td>Mike Jackson</td>
+                    <td>2</td><td>CB</td><td>6-1</td><td>210</td>
+                    <td>29</td><td>6</td><td>Miami</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/xl17.jpg" alt="Xavier Legette" width="100"></td>
+                    <td>Xavier Legette</td>
+                    <td>17</td><td>WR</td><td>6-3</td><td>218</td>
+                    <td>25</td><td>3</td><td>South Carolina</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/tm72.jpg" alt="Taylor Moton" width="100"></td>
+                    <td>Taylor Moton</td>
+                    <td>72</td><td>T</td><td>6-5</td><td>316</td>
+                    <td>32</td><td>10</td><td>Western Michigan</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/ns11.jpg" alt="Nic Scourton" width="100"></td>
+                    <td>Nic Scourton</td>
+                    <td>11</td><td>OLB</td><td>6-2</td><td>265</td>
+                    <td>22</td><td>2</td><td>Texas A&amp;M</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/ikem79.jpg" alt="Ikem Ekwonu" width="100"></td>
+                    <td>Ikem Ekwonu</td>
+                    <td>79</td><td>T</td><td>6-4</td><td>335</td>
+                    <td>26</td><td>5</td><td>NC State</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </main>
+<footer>
+    <p>&copy; 2026 Carolina Panthers Overload. Unofficial fan site.</p>
+</footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/players.js" defer></script>
+</body>
+</html>
