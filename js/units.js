@@ -103,7 +103,8 @@ function playerMatches(li, group) {
     // a search like "9" or "#9" looks for that jersey number
     if (/^#?\d{1,2}$/.test(searchText)) {
         var number = searchText.replace('#', '');
-        return text.indexOf('#' + number + ' ') === 0;
+        var jersey = text.match(/#(\d{1,2})\b/);
+        return jersey !== null && jersey[1] === number;
     }
     // a search like "cb" matches the whole position group
     if (group.tag !== '' && group.tag.indexOf(searchText) === 0 && searchText.length <= 3) {

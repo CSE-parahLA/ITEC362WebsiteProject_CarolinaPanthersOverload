@@ -154,7 +154,7 @@ var unitSelect = document.getElementById('signup-unit');
 var signupMessage = document.getElementById('signup-message');
 
 // regular expressions
-var namePattern = /^[A-Za-z][A-Za-z '.-]{1,39}$/;   // 2 to 40 letters
+var namePattern = /^\p{L}[\p{L}\p{M} '.-]{1,39}$/u;   // 2 to 40 letters
 var emailPattern = /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/;   // something@something.xx
 
 // shows or clears an error under a field. Returns true if there is no error.
